@@ -6,6 +6,8 @@ public class Reverse {
     public static void main(String[] args) {
         
         int[] arr = {1, 3, 23, 45, 65};
+
+        // reverse(array)
         reverse(arr);
         System.out.println(Arrays.toString(arr));
     }
