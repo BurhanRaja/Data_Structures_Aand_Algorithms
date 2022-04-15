@@ -1,10 +1,11 @@
 package com.Burhan;
 
+// Maximum in an array
+
 public class Maximum {
     public static void main(String[] args) {
         int[] arr = {1, 3, 23, 9, 65};
 
-        // max(array)
         max(arr);
     }
 

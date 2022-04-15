@@ -2,6 +2,8 @@ package com.Burhan;
 
 import java.util.Arrays;
 
+// Reversing the array
+
 public class Reverse {
     public static void main(String[] args) {
         
@@ -12,6 +14,8 @@ public class Reverse {
         System.out.println(Arrays.toString(arr));
     }
 
+    // Naive Method
+    // {{{{
     static int[] reverse(int[] num) {
         int start = 0;
         int end = num.length - 1;
@@ -28,4 +32,7 @@ public class Reverse {
         num[a] = num[b];
         num[b] = temp;
     }
+    // }}}}
+
+
 }

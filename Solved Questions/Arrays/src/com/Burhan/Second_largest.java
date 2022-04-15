@@ -3,14 +3,14 @@ package com.Burhan;
 public class Second_largest {
     public static void main(String[] args) {
         int[] arr = {20, 5, 10, 9, 8};
-
-        // System.out.println(largest(arr));
-
-        largest(arr);
         
-        System.out.println(second_large(arr));
+        // System.out.println(second_large(arr));
+        System.out.println(eff_secondNum(arr));
     }
 
+    // Naive method
+    
+    // {{{{
     // Here we are getting the index of the largest element in an array
     static int largest(int[] array){
         
@@ -35,6 +35,25 @@ public class Second_largest {
                     secondmaxValue = i;
                 }
                 if (array[i] > array[secondmaxValue]) {
+                    secondmaxValue = i;
+                }
+            }
+        }
+        return array[secondmaxValue];
+    }
+    // }}}}
+
+    // Most efficient way to find the second largest number in an array
+    static int eff_secondNum(int[] array) {
+        int maxValue = 0;
+        int secondmaxValue = -1;
+        for (int i = 0; i < array.length; i++) {
+            
+            if (array[i] > array[maxValue]) {
+                maxValue = i;   
+            }
+            else if (array[i] != array[maxValue]) {
+                if ( secondmaxValue == -1 || array[i] > array[secondmaxValue]) {
                     secondmaxValue = i;
                 }
             }
