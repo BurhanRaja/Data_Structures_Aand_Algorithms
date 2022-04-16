@@ -6,9 +6,9 @@ public class Delete_in_Array {
     public static void main(String[] args) {
 
         // In fixed array
-        int[] arr = {3, 8, 12, 5, 6};
+        int[] arr = {3, 6, 12, 6, 5};
 
-        delete(arr, 12);
+        delete(arr, 6);
         System.out.println(Arrays.toString(arr));
     }
 

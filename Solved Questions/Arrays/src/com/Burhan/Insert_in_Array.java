@@ -37,7 +37,6 @@ public class Insert_in_Array {
         // n-1 = 2 i.e. 0, 1, 2
         // index is the index number where you have to insert the given number
         for (int i = n-1; i >= index; i--) {
-            // here the index's value shifts one index further.
             any[i+1] = any[i];
         }
         // x is the number to be added

@@ -28,6 +28,7 @@ public class Remove_Duplicates_array {
         }
 
         System.out.println(Arrays.toString(temp));
+        
     }
 
     // Less space
