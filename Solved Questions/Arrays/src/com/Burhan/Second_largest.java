@@ -42,6 +42,7 @@ public class Second_largest {
         return array[secondmaxValue];
     }
     // }}}}
+    
 
     // Most efficient way to find the second largest number in an array
     static int eff_secondNum(int[] array) {
@@ -58,6 +59,6 @@ public class Second_largest {
                 }
             }
         }
-        return array[secondmaxValue];
+        return secondmaxValue;
     }
 }

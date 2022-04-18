@@ -6,19 +6,18 @@ public class Maximum {
     public static void main(String[] args) {
         int[] arr = {1, 3, 23, 9, 65};
 
-        max(arr);
+        System.out.println(max(arr));
     }
 
-    static void max(int[] arr) {
-        int start = 0;
+    static int max(int[] arr) {
         int end = arr.length - 1;
-        int maxValue = arr[start];
+        int maxValue = 0;
 
-        for (int i = start; i <= end; i++) {
-            if (arr[i] > maxValue) {
-                maxValue = arr[i];
+        for (int i = 0; i <= end; i++) {
+            if (arr[i] > arr[maxValue]) {
+                maxValue = i;
             }
         }
-       System.out.println(maxValue); 
+       return arr[maxValue]; 
     }
 }

@@ -1,7 +1,5 @@
 package com.Burhan;
 
-import java.util.Arrays;
-
 public class Remove_Duplicates_array {
     public static void main(String[] args) {
         int[] arr = {10, 20, 20, 30, 30, 30};
@@ -10,7 +8,7 @@ public class Remove_Duplicates_array {
         System.out.println(remove(arr));
     }
 
-    static void rem_dup_array(int[] array) {
+    static int[] rem_dup_array(int[] array) {
         int n = array.length;
         int[] temp = new int[n];
         temp[0] = array[0];
@@ -22,13 +20,10 @@ public class Remove_Duplicates_array {
                 res++;
             }
         }
-
         for (int j = 0; j < res; j++) {
             array[j] = temp[res];
         }
-
-        System.out.println(Arrays.toString(temp));
-        
+        return temp;
     }
 
     // Less space
