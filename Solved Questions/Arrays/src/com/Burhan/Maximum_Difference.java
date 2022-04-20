@@ -37,7 +37,7 @@ public class Maximum_Difference {
 
         for (int j = 0; j < n; j++) {
             minVal = Math.min(minVal, arr[j]);
-            Math.max(res, (arr[j] - minVal));
+            res = Math.max(res, (arr[j] - minVal));
         }
         return res;
     }
