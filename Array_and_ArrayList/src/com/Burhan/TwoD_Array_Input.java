@@ -22,7 +22,6 @@ class TwoD_Array_Input {
         int[][] arr2D = new int[3][2];
 
         // *** Input of 2D array ***
-
         // Taking one-one row
         for (int row = 0; row < arr2D.length; row++) {
             // Taking number in Columns of rows

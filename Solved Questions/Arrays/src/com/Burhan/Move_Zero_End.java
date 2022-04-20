@@ -36,6 +36,7 @@ public class Move_Zero_End {
         int n = array.length;
         int count = 0;
 
+        // {8, 5, 0, 10, 0, 20}
         for (int i = 0; i < n; i++) {
             if (array[i] != 0) {
                 int temp = array[count];
