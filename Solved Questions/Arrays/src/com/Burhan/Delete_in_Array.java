@@ -8,7 +8,9 @@ public class Delete_in_Array {
         // In fixed array
         int[] arr = {3, 6, 12, 6, 5};
 
-        delete(arr, 6);
+        // delete(arr, 6);
+        // System.out.println(removeElement(arr, 6));
+        removeElement(arr, 12);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -33,5 +35,19 @@ public class Delete_in_Array {
             arr[j] = arr[j+1];
         }
         return n-1;
+    }
+
+    // Short answer
+    static int removeElement(int[] arr, int val) {
+        int n = arr.length;
+        int j = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != val) {
+                arr[j] = arr[i];
+                j++;
+            }
+        }
+        return j;
     }
 }
