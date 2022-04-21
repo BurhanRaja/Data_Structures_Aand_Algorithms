@@ -19,7 +19,6 @@ public class Max_Sum_Subarray {
             for (int j = i; j < n; j++) {
                 current += arr[j];
                 res = Math.max(current, res);
-                
             }
         }
 
@@ -32,7 +31,7 @@ public class Max_Sum_Subarray {
         int maxEndings = arr[0];
         int i;
 
-        for (i = 1; i < n; i++) {
+        for (i = 0; i < n; i++) {
             maxEndings = Math.max(maxEndings + arr[i], arr[i]);
         }
 
