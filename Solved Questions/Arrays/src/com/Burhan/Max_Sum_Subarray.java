@@ -2,9 +2,11 @@ package com.Burhan;
 
 public class Max_Sum_Subarray {
     public static void main(String[] args) {
-        int[] array = {2, 3, -8, 7, -1, 2, 3};
+        // int[] array = {2, 3, -8, 7, -1, 2, 3};
         // int[] array = {5, 8, 3};
         // int[] array = {-5, -8, -3};
+        // int[] array = {-2,1,-3,4,-1,2,1,-5,4};
+        int[] array = {1};
         // int ans = maxSum(array);
         int ans = maxSumSubarr(array);
         System.out.println(ans);
@@ -25,16 +27,21 @@ public class Max_Sum_Subarray {
         return res;
     }
 
-    // Efficient    
-    static int maxSumSubarr(int[] arr) {
-        int n = arr.length;
-        int maxEndings = arr[0];
-        int i;
-
-        for (i = 0; i < n; i++) {
-            maxEndings = Math.max(maxEndings + arr[i], arr[i]);
+    // Efficient (Kadan's Algorithm)
+    static int maxSumSubarr(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        int max = nums[0];
+        
+        for (int i=0; i<n; i++) {
+            sum += nums[i];
+            if (sum > max) {
+                max = sum;
+            }
+            if (sum < 0) {
+                sum = 0;
+            }
         }
-
-        return maxEndings;
+        return max;
     }
 }
