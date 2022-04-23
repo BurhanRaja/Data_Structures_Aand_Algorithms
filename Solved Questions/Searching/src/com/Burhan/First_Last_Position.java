@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class First_Last_Position {
     public static void main(String[] args) {
-        int[] array = {5, 7, 7, 7, 7, 8, 8, 10};
-        int target = 8;
+        int[] array = {5, 7, 7, 7, 7, 7, 8, 8, 10};
+        int target = 7;
         int[] answer = finalFandL(array, target);
         System.out.println(Arrays.toString(answer));
     }
