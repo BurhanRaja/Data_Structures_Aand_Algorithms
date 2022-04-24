@@ -27,9 +27,10 @@ public class Remove_Duplicates_array {
     }
 
     // Less space
+    // {10, 20, 20, 30, 30, 30}
     static int remove(int[] nums){
         int n = nums.length;
-        int res = 1;
+        int res = 1; // 2, 3
 
         for (int i = 0; i < n; i++) {
             if (nums[i] != nums[res-1]) {
