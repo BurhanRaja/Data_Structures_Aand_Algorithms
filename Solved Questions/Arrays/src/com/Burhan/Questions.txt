@@ -25,7 +25,7 @@ Find N Unique Integers Sum up to Zero
 Lucky Number In a Matrix
 Maximum Subarray
 Reshape the Matrix
-Plus One
+Plus One --------------------------------------------------------->
 Remove Duplicates from Sorted Array ------------------------------->
 Minimum Cost to Move Chips to The Same Position
 
