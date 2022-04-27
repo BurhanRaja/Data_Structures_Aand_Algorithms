@@ -26,6 +26,7 @@ public class Rotate_90_AntiClockwise {
 
     }
 
+    // Naive
     static void rotate2DArray(int[][] arr) {
         int n = arr.length;
         int[][] temp = new int[n][n];
