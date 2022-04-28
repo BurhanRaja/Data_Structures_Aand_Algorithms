@@ -1,7 +1,5 @@
 package com.Burhan;
 
-import java.util.Arrays;
-
 public class Flipping_Image {
     public static void main(String[] args) {
         int[][] arr = {
