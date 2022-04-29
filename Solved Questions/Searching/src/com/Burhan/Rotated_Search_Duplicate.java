@@ -2,26 +2,30 @@ package com.Burhan;
 
 public class Rotated_Search_Duplicate {
     public static void main(String[] args) {
-        int[] arr = {2, 2, 9, 2, 2};
-        int ans = pivotNum(arr);
+        int[] arr = {2,2,2,0,1};
+        int ans = numRotated(arr, 2);
         System.out.println(ans);
     }
 
-    static int numRotated(int[] arr, int target) {
-        int pivot = pivotNum(arr);
+    static int numRotated(int[] nums, int target) {
+        int pivot = pivotNum(nums);
 
-        if (arr[pivot] == target) {
+        if (pivot == -1) {
+            // just do normal binary search
+            return binarySearch(nums, target, 0 , nums.length - 1);
+        }
+
+        // if pivot is found, you have found 2 asc sorted arrays
+        if (nums[pivot] == target) {
             return pivot;
         }
 
-        int firstHalf = binarySearch(arr, target, 0, pivot-1);
+        if (target >= nums[0]) {
+            return binarySearch(nums, target, 0, pivot - 1);
+        }
 
-        if (firstHalf != -1) {
-            return firstHalf;
-        }
-        else {
-            return binarySearch(arr, target, pivot+1, arr.length-1);
-        }
+        return binarySearch(nums, target, pivot + 1, nums.length - 1);
+        
     }
 
     // Answer will be find as same as the search in simple rotated array 
@@ -41,9 +45,10 @@ public class Rotated_Search_Duplicate {
             if (mid > start && nums[mid] < nums[mid-1]) {
                 return mid-1;
             }
+            // skip the duplicate
             if (nums[mid] == nums[start] && nums[mid] == nums[end]) {
 
-                // Checking wheteher the start ans ends are pivots
+                // Checking wheteher the start and ends are pivots
                 if (nums[start] > nums[start+1]) {
                     return start;
                 }
@@ -54,8 +59,8 @@ public class Rotated_Search_Duplicate {
                 }
                 end--;
             }
-            // Checking if start > mid or mid = start and mid > end
-            else if (nums[start] > nums[mid] || (nums[start] == nums[mid] && nums[mid] > nums[end])) {
+            // Checking if start < mid (sorted left side) or mid = start (after the pivot part) and mid > end (after the pivot part)
+            else if (nums[start] < nums[mid] || (nums[start] == nums[mid] && nums[mid] > nums[end])) {
                 start = mid+1;
             }
             else {

@@ -2,27 +2,33 @@ package com.Burhan;
 
 public class Search_Rotated_Sorted_Array {
     public static void main(String[] args) {
-        int[] arr = {3, 4, 5, 6, 7, 0, 1, 2};
-        int target = 7;
-        int ans = numRotated(arr, target);
+        int[] arr = {1, 3};
+        int target = 1;
+        // int ans = numRotated(arr, target);
+        int ans = pivotNum(arr);
         System.out.println(ans);
     }
 
-    static int numRotated(int[] arr, int target) {
-        int pivot = pivotNum(arr);
+    static int numRotated(int[] nums, int target) {
+        int pivot = pivotNum(nums);
 
-        if (arr[pivot] == target) {
+        // if you did not find a pivot, it means the array is not rotated
+        if (pivot == -1) {
+            // just do normal binary search
+            return binarySearch(nums, target, 0 , nums.length - 1);
+        }
+
+        // if pivot is found, you have found 2 asc sorted arrays
+        if (nums[pivot] == target) {
             return pivot;
         }
 
-        int firstHalf = binarySearch(arr, target, 0, pivot-1);
+        if (target >= nums[0]) {
+            return binarySearch(nums, target, 0, pivot - 1);
+        }
 
-        if (firstHalf != -1) {
-            return firstHalf;
-        }
-        else {
-            return binarySearch(arr, target, pivot+1, arr.length-1);
-        }
+        return binarySearch(nums, target, pivot + 1, nums.length - 1);
+        
     }
 
 
@@ -54,7 +60,7 @@ public class Search_Rotated_Sorted_Array {
         return -1;
     }
 
-    static int binarySearch(int[] arr, int target, int start, int end) {;
+    static int binarySearch(int[] arr, int target, int start, int end) {
 
         while (start <= end) { 
             int mid = start + (end - start)/2;

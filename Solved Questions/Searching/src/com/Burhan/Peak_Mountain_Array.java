@@ -2,7 +2,7 @@ package com.Burhan;
 
 public class Peak_Mountain_Array {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 6, 8, 10, 5, 4};
+        int[] arr = {1,2};
         // int[] arr = {0, 2, 1, 0};
         // int[] arr = {0,10,5,2};
         int ans = peakNum(arr);
