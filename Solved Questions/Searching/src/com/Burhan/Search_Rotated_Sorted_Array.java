@@ -2,7 +2,7 @@ package com.Burhan;
 
 public class Search_Rotated_Sorted_Array {
     public static void main(String[] args) {
-        int[] arr = {1, 3};
+        int[] arr = {3, 4, 5, 6, 7, 0, 1, 2};
         int target = 1;
         // int ans = numRotated(arr, target);
         int ans = pivotNum(arr);
