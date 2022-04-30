@@ -16,18 +16,21 @@ public class Search_Rowwise_Columnwise_Sorted_Array {
         // Becoz the top left corner is the smallest element if x is greater than 10 we cannot decide where to go and the same reason goes for the bottom right corner it is greater than all the elements.
     }
 
-    static void search(int[][] arr, int x) {
+    static int[] search(int[][] arr, int x) {
         int countRow = 0;
         int countCol = arr[arr.length-1].length-1;
 
         while (countRow <= countCol) {
+            if (x == arr[countRow][countCol]) {
+                return new int[] {countRow, countCol};
+            }
             if (x > arr[countRow][countCol]) {
                 countRow++;
             }
-            else if (x < arr[countRow][countCol]) {
+            else {
                 countCol--;
             }
         }
-        System.out.println("["+countRow +", "+ countCol+"]");
+        return new int[] {-1, -1};
     }
 }
