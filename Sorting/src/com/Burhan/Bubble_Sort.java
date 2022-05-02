@@ -11,8 +11,8 @@ class Bubble_Sort {
 
     static void bubble(int[] arr) {
         // To check if the elements are swapped or not
-        boolean flag = false;
-        for (int i = 0; i < arr.length-1; i++) {
+        for (int i = 0; i < arr.length; i++) {
+            boolean flag = false;
             for (int j = 1; j < arr.length-i; j++) {
                 if (arr[j] < arr[j-1]) {
                     int temp = arr[j];
@@ -21,7 +21,7 @@ class Bubble_Sort {
                     flag = true;
                 }
             }
-            // To break if the array is already sorted
+            // To break if the array is already sorted (not true then break)
             if (!flag) {
                 break;
             }
