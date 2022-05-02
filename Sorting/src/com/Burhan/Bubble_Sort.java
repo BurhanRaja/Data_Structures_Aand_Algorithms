@@ -20,6 +20,10 @@ class Bubble_Sort {
                     arr[j-1] = temp;
                     flag = true;
                 }
+                // Can also be used
+                // else {
+                //     break;
+                // }
             }
             // To break if the array is already sorted (not true then break)
             if (!flag) {
