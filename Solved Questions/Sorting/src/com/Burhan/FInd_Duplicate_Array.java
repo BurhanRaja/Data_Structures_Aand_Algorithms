@@ -4,9 +4,9 @@ import java.util.*;
 
 public class FInd_Duplicate_Array {
     public static void main(String[] args) {
-        // int[] arr = {4,3,2,7,8,2,3,1};
+        int[] arr = {4,3,2,7,8,2,3,1};
         // int[] arr = {1,1, 2};
-        int[] arr = {1};
+        // int[] arr = {1};
         List<Integer> ans = findDup(arr);
         System.out.println(ans);
     }
