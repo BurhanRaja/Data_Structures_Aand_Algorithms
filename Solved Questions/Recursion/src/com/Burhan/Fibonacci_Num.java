@@ -8,10 +8,8 @@ class Fibonacci_Num {
 
     static int fibo(int n) {
         if (n<2) {
-            System.out.println(n);
             return n;
         }
-        System.out.println(n);
         return fibo(n-1) + fibo(n-2);
     }
 }
