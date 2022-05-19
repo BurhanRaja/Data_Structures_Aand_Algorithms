@@ -58,13 +58,4 @@ public class Relative_Sort_array {
         arr[b] = temp;
     }
 
-    static int maxNumber(int[] arr, int start, int end) {
-        int maxNum = start;
-        for (int i = start; i <= end; i++) {
-            if (arr[i] > arr[maxNum]) {
-                maxNum = i;
-            }
-        }
-        return maxNum;
-    }
 }
