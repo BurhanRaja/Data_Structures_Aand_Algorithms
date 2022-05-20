@@ -1,4 +1,4 @@
-package com.Burhan.Medium;
+package com.Burhan.Medium.Trapping_Rainwater;
 
 public class Trapping_Rain_Water {
     public static void main(String[] args) {
