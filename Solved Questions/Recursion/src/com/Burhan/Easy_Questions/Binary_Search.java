@@ -1,4 +1,4 @@
-package com.Burhan;
+package com.Burhan.Easy_Questions;
 
 public class Binary_Search {
     public static void main(String[] args) {
@@ -16,12 +16,10 @@ public class Binary_Search {
         }
         int mid = start + (end-start)/2;
         if (target > arr[mid]) {
-            start = mid+1;
-            return binarySearch(arr, target, start, end);
+            return binarySearch(arr, target, mid+1, end);
         }
         else if (target < arr[mid]) {
-            end = mid-1;
-            return binarySearch(arr, target, start, end);
+            return binarySearch(arr, target, start, mid-1);
         }
         else {
             return mid;

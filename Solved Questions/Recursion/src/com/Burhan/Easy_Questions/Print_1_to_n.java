@@ -1,4 +1,4 @@
-package com.Burhan;
+package com.Burhan.Easy_Questions;
 
 public class Print_1_to_n {
     public static void main(String[] args) {

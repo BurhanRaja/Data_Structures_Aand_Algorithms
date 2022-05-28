@@ -1,4 +1,4 @@
-package com.Burhan;
+package com.Burhan.Easy_Questions;
 
 public class Reverse_Digit {
     public static void main(String[] args) {
