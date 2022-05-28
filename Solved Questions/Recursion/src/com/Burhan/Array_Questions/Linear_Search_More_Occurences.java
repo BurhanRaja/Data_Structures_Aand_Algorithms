@@ -13,6 +13,9 @@ public class Linear_Search_More_Occurences {
         // Second Way
         ArrayList<Integer> ans = new ArrayList<>();
         System.out.println(findAllIndex2(arr, 0, 4, ans));
+
+        // third Way
+        System.out.println(findAllIndex3(arr, 0, 4));
     }
 
     // First Way
@@ -38,5 +41,23 @@ public class Linear_Search_More_Occurences {
             anyList.add(n);
         }
         return findAllIndex2(arr, n+1, target, anyList);
+    }
+    
+    // Third Way (Very Very Imp) Use rarely
+    static ArrayList<Integer> findAllIndex3(int[] arr, int n, int target) {
+        ArrayList<Integer> anyList = new ArrayList<>();
+
+        if (n==arr.length) {
+            return anyList;
+        }
+        
+        if (arr[n] == target) {
+            anyList.add(n);
+        }
+        ArrayList<Integer> allAnswers = findAllIndex3(arr, n+1, target);
+
+        anyList.addAll(allAnswers);
+
+        return anyList;
     }
 }
