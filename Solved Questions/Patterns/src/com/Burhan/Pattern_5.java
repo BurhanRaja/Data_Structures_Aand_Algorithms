@@ -10,7 +10,7 @@ public class Pattern_5 {
         int c = 0;
         for (int i = 1; i < (2*n); i++) {
             if (i > n) {
-                c = n+n-i;
+                c = 2*n-i;
             }
             else {
                 c=i;

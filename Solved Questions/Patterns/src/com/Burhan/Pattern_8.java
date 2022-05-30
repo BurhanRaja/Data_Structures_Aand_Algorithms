@@ -1,25 +1,27 @@
 package com.Burhan;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Pattern_8 {
     public static void main(String[] args) {
-        
-        Scanner inp = new Scanner(System.in);
-        int n = inp.nextInt();
+        int n = 5;
+        pattern(n);
+    }
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n-i; j++) {
-                System.out.print(" ");
-            }
-            for (int k = 1; k < i+1; k++) {
-                System.out.print("*");
-            }
-            for (int h = 1; h <= i-1; h++) {
-                System.out.print("*");
+    static void pattern(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < 2*n; j++) {
+                if (j==n) {
+                    System.out.print("*");
+                }
+                else if (j >= n-i && j <= n+i) {
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
-        inp.close();
     }
 }
