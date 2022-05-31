@@ -7,7 +7,7 @@ public class Bubble_Sort {
         int[] arr = {3,1,4,5,2};
         // bubbleSortCall(arr);
         // System.out.println(Arrays.toString(arr));
-        bubbleSort2(arr, arr.length-1, 0);
+        bubbleSort2(arr, arr.length, 0);
         System.out.println(Arrays.toString(arr));
     }
 
