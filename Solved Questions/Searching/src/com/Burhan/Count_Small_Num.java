@@ -11,6 +11,7 @@ public class Count_Small_Num {
         // int[] nums = {5,2,6,1};
         // int[] nums = {1, 1};
         int[] nums = {26,78,27,100,33,67,90,23,66,5,38,7,35,23,52,22,83,51,98,69,81,32,78,28,94,13,2,97,3,76,99,51,9,21,84,66,65,36,100,41};
+        // int[] nums = {8,1,2,2,3};
 
         List<Integer> answer = countNum(nums);
         for (int i = 0; i < answer.size(); i++) {
@@ -18,6 +19,7 @@ public class Count_Small_Num {
         }
     }
     // {1,2,5,6}
+    // [4,0,1,1,3]
     static List<Integer> countNum(int[] nums) {
         ArrayList<Integer> arr = new ArrayList<>();
         List<Integer> list = new ArrayList<Integer>();
