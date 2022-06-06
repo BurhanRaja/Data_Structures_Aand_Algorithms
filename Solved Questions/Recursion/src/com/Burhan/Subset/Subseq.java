@@ -2,7 +2,7 @@ package com.Burhan.Subset;
 
 import java.util.ArrayList;
 
-public class Subset {
+public class Subseq {
     public static void main(String[] args) {
         // subseq("", "abc");
         // System.out.println(subseqList("", "abc"));

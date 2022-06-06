@@ -3,7 +3,7 @@ package com.Burhan.Subset;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subset_Iterative {
+public class Subseq_Iterative {
     public static void main(String[] args) {
         int[] arr = {1,2,3};
 
