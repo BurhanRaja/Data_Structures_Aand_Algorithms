@@ -2,7 +2,7 @@ package com.Burhan.Easy_Questions;
 
 class Fibonacci_Num {
     public static void main(String[] args) {
-        int ans = fibo(5);
+        int ans = fibo(4);
         System.out.println(ans);
     }
 
