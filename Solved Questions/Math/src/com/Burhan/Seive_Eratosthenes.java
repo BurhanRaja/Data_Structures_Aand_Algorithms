@@ -3,7 +3,7 @@ package com.Burhan;
 public class Seive_Eratosthenes {
     public static void main(String[] args) {
         int n = 40;
-        boolean[] primes = new boolean[n+1];
+        boolean[] primes = new boolean[n+1]; // All are false at first
         seive(n, primes);
     }
 
