@@ -5,8 +5,8 @@ public class Max_Sum_Subarray {
         // int[] array = {2, 3, -8, 7, -1, 2, 3};
         // int[] array = {5, 8, 3};
         // int[] array = {-5, -8, -3};
-        // int[] array = {-2,1,-3,4,-1,2,1,-5,4};
-        int[] array = {1};
+        int[] array = {-2,1,-3,4,-1,2,1,-5,4};
+        // int[] array = {1};
         // int ans = maxSum(array);
         int ans = maxSumSubarr(array);
         System.out.println(ans);

@@ -2,8 +2,8 @@ package com.Burhan.Easy.Largest_Altitude;
 
 public class Largest_Altitude {
     public static void main(String[] args) {
-        // int[] arr = {-5,1,5,0,-7};
-        int[] arr = {-4,-3,-2,-1,4,3,2};
+        int[] arr = {-5,1,5,0,-7};
+        // int[] arr = {-4,-3,-2,-1,4,3,2};
         System.out.println(largestAltitude(arr));
     }
 

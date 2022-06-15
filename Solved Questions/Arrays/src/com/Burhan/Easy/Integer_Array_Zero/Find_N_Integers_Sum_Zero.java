@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Find_N_Integers_Sum_Zero {
     public static void main(String[] args) {
-        int n = 9;
+        int n = 8;
         int[] ans = ZeroArr(n);
         System.out.println(Arrays.toString(ans));
     }

@@ -2,8 +2,9 @@ package com.Burhan.Easy.Minimum_Bus_Distance;
 
 public class Min_Bus_distance {
     public static void main(String[] args) {
-        int[] arr = {7,10,1,12,11,14,5,0};
-        int ans = disBus(arr, 0, 7);
+        // int[] arr = {7,10,1,12,11,14,5,0};
+        int[] arr = {1,2,3,4};
+        int ans = disBus(arr, 0, 3);
         System.out.println(ans);
     }
 

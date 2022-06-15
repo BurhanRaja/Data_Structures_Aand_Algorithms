@@ -3,9 +3,9 @@ package com.Burhan.Easy.Leaders_In_Array;
 public class Leaders_in_Array {
     public static void main(String[] args) {
         int[] arr = {7, 4, 10, 3, 6, 5, 2};
-        // leader(arr);
+        leader(arr);
+        System.out.println();
         leader_array(arr);
-        // System.out.println();
     }
 
     static void leader(int[] arr) {
