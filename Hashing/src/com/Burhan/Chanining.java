@@ -5,7 +5,7 @@ import java.util.*;
 public class Chanining {
     public static void main(String[] args) {
 
-        MyHash hashing = new MyHash(2);
+        MyHash hashing = new MyHash(7);
         hashing.insert(90);
         hashing.insert(20);
         hashing.insert(71);

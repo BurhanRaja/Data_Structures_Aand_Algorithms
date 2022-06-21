@@ -9,7 +9,13 @@ public class Repeating_Elements {
 
     // Efficient solution
     static int repeatElem(int[] arr) {
-        boolean[] visited = new boolean[arr.length-1];
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        boolean[] visited = new boolean[max];
 
         for (int i = 0; i < arr.length; i++) {
             if (visited[arr[i]]) {
@@ -22,4 +28,7 @@ public class Repeating_Elements {
     }
 
     // Remaining the O(1) Auxilary space, O(n) time complexity and not modifying the array
+    // static int repeatElement(int[] arr) {
+
+    // }
 }
