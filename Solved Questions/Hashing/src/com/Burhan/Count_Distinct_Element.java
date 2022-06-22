@@ -46,7 +46,7 @@ public class Count_Distinct_Element {
     }
 
     // More Efficient Solution. If Integer array instead of int
-    // Complexity = O(1)
+    // Complexity = O(n)
     static int countElem(Integer[] arr) {
         HashSet<Integer> list = new HashSet<>(Arrays.asList(arr));
         return list.size();
