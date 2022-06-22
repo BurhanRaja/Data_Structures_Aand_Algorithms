@@ -3,11 +3,11 @@ package com.Burhan;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Hashset {
+public class Hashset_tut {
     public static void main(String[] args) {
         
         // HashSet is used to store only keys
-        HashSet<String> h = new HashSet<>();
+        HashSet<String> h = new HashSet<String>();
         
         h.add("Burhan");
         h.add("Zuzar");
