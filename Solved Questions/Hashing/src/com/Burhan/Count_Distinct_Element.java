@@ -20,6 +20,7 @@ public class Count_Distinct_Element {
     static int countDigit(int[] arr) {
         int res = 0;
     
+        // Unique {
         for (int i = 0; i < arr.length; i++) {
             boolean flag = false;
             for (int j = 0; j < i; j++) {
@@ -31,6 +32,7 @@ public class Count_Distinct_Element {
                 res++;
             }
         }
+        // }
     
         return res;
     }

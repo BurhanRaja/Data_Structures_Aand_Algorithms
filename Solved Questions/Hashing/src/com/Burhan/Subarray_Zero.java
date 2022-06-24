@@ -30,6 +30,7 @@ public class Subarray_Zero {
         return "No";
     }
 
+    // Unique {
     static String effSubArr(int[] arr) {
         int sum = 0;
         HashSet<Integer> h = new HashSet<>();
@@ -39,11 +40,14 @@ public class Subarray_Zero {
             if (h.contains(sum)) {
                 return "Yes";
             }
-            else {
-                h.add(sum);
+            // If the sum==0 before any prefix sum or at the start
+            if (sum == 0) {
+                return "Yes";
             }
+            h.add(sum);
         }
 
         return "No";
     }
+    // }
 }
