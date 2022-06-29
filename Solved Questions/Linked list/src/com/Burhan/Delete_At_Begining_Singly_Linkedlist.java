@@ -1,6 +1,6 @@
 package com.Burhan;
 
-public class Insert_At_End_Singly_Linkedlist {
+public class Delete_At_Begining_Singly_Linkedlist {
     public static void main(String[] args) {
         Node head = null;
         head = insertAtEnd(head, 10); // 10
@@ -8,10 +8,16 @@ public class Insert_At_End_Singly_Linkedlist {
         head = insertAtEnd(head, 30); // 10 20 30
         head = insertAtEnd(head, 40); // 10 20 30 40
 
+        // printList(head); 
+        
+        
+        head = deleteNode(head);
+        head = deleteNode(head);
         printList(head);
 
     }
     
+    // Insert
     static Node insertAtEnd(Node head, int x) {
         Node temp = new Node(x);
         if (head == null) {
@@ -24,6 +30,19 @@ public class Insert_At_End_Singly_Linkedlist {
         }
         curr.next = temp;
         return head;
+    }
+
+    static Node deleteNode(Node head) {
+        if (head == null) {
+            return null;
+        }
+        // Node temp = head.next;
+        // head = null;
+        // return temp;
+
+        else {
+            return head.next;
+        }
     }
     
 
