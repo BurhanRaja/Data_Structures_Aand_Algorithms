@@ -62,6 +62,7 @@ public class Count_nbyk_Occurences {
         HashMap<Integer, Integer> hMap = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             hMap.put(arr[i], hMap.getOrDefault(arr[i], 0)+1);
+            
             if (hMap.get(arr[i]) > Math.abs(arr.length/k)) {
                 System.out.println(arr[i]);
             }
