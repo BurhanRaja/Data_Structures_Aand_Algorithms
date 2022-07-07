@@ -2,27 +2,54 @@ package com.Burhan;
 
 public class Doubly_Linkedlist {
     public static void main(String[] args) {
-        Node head = new Node(10);
-        Node temp1 = new Node(20);
-        Node temp2 = new Node(30);
+        DoublyLinkedlist dList = new DoublyLinkedlist();
+        dList.addNode(10);
+        dList.addNode(20);
+        dList.addNode(30);
+        dList.addNode(40);
+        dList.addNode(50);
 
-        head.next = temp1;
-        temp1.prev = head;
-
-        temp1.next = temp2;
-        temp2.prev = temp1;
+        dList.printList();
     }
 
 }
 
-class Node {
-    int data;
-    Node prev;
-    Node next;
+class DoublyLinkedlist {
+    class Node {
+        int data;
+        Node prev;
+        Node next;
+    
+        Node (int x) {
+            this.data = x;
+            this.prev = null;
+            this.next = null;
+        }
+    }
 
-    Node (int x) {
-        this.data = x;
-        this.prev = null;
-        this.next = null;
+    Node head, tail = null;  
+    public void addNode(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = tail = newNode;
+            head.prev = null;
+            tail.next = null;
+        }
+        else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+            tail.next = null;
+        }
+    }
+
+    public void printList()  {
+        Node curr = head;
+
+        while (curr.next != null) {
+            System.out.println(curr.data);
+            curr = curr.next;
+        }
     }
 }

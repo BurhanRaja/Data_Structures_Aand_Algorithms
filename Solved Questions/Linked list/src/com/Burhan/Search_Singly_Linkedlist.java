@@ -75,6 +75,7 @@ public class Search_Singly_Linkedlist {
 class Node {
     int data;
     Node next;
+    public com.Burhan.Node prev;
 
     Node (int x) {
         this.data = x;
