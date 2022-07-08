@@ -1,16 +1,52 @@
 package com.Burhan;
 
-public class Insert_At_Begining_Circular_Linkelist {
+public class Insert_At_End_Circular_Linkedlist {
     public static void main(String[] args) {
-        Node head = null;
-        // head.next = new Node(20);
-        // head.next.next = new Node(30);
-        // head.next.next.next = head;
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = head;
 
-        // head = insert(head, 5);
-        head = insertNode(head, 5);
+        // head = insertNode(head, 40);
+        head = insert(head, 40);
         printList(head);
 
+    }
+
+    // Naive
+    static Node insertNode(Node head, int x) {
+        Node temp = new Node(x);
+        if (head == null) {
+            temp.next = temp;
+            return temp;
+        }
+        else {
+            Node curr = head;
+            while (curr.next != head) {
+                curr = curr.next;
+            }
+            curr.next = temp;
+            temp.next = head;
+
+            return head;
+        }
+    }
+
+    static Node insert(Node head, int x) {
+        Node temp = new Node(x);
+        if (head == null) {
+            temp.next = temp;
+            return temp;
+        }
+        else {
+            temp.next = head.next;
+            head.next = temp;
+
+            int t = head.data;
+            head.data = temp.data;
+            temp.data = t;
+            return temp;
+        }
     }
 
     static void printList(Node head) {
@@ -26,46 +62,8 @@ public class Insert_At_Begining_Circular_Linkelist {
             }
         }
     }
-
-    // Naive Solution
-    static Node insert(Node head, int x) {
-        Node temp = new Node(x);
-        if (head == null) {
-            temp.next = temp;
-            return temp;
-        }
-
-        else {
-            Node curr = head;
-            while (curr.next != head) {
-                curr = curr.next;
-            }
-            curr.next = temp;
-            temp.next = head;
-            return temp;
-        }
-    }
-
-    static Node insertNode(Node head, int x) {
-        Node temp = new Node(x);
-        if (head == null) {
-            temp.next = temp;
-            return temp;
-        }
-        else {
-            // Adding a Node after head
-            temp.next = head.next;
-            head.next = temp;
-
-            // Swapping the first two Nodes
-            int t = head.data;
-            head.data = temp.data;
-            temp.data = t;
-            return head;
-        }
-    }
-
 }
+
 
 class Node {
     int data;
