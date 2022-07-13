@@ -16,6 +16,10 @@ public class Delete_At_Pos_Circular_Linkedlist {
         int i = 1;
         Node curr = head;
 
+        if (k==1) {
+            // return deleteAtBegining(head)
+        }
+
         // Till previous position 
         while(i <= k-2 && curr != null) {
             curr = curr.next;
