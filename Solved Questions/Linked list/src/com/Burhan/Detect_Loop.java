@@ -55,12 +55,12 @@ class Detect_Loop {
         Node slow = head;
         Node fast = head;
 
-        while (fast != null && slow != null){
+        while (fast.next != null && slow != null){
+            slow = slow.next;
+            fast = fast.next.next;
             if (slow.data == fast.data) {
                 return true;
             } 
-            slow = slow.next;
-            fast = fast.next.next;
         }
 
         return false;
