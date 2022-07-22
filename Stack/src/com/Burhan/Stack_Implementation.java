@@ -15,6 +15,7 @@ public class Stack_Implementation {
 
         System.out.println(s.peek());
         System.out.println(s.size());
+        System.out.println(s.contains(30));
 
         s.pop();
 
