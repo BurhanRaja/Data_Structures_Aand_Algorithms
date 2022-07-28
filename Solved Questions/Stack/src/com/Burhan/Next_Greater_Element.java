@@ -5,14 +5,14 @@ import java.util.Arrays;
 
 public class Next_Greater_Element {
     public static void main(String[] args) {
-        int[] arr = {5, 15, 10, 8, 6, 12, 9, 18};
+        int[] arr = {6, 2, 5, 4, 1, 5, 6};
         int[] ans  = nextGreater(arr);
         System.out.println(Arrays.toString(ans));
     }
 
     static int[] nextGreater(int[] arr) {
         ArrayDeque<Integer> s = new ArrayDeque<>();
-        
+
         int[] ans = new int[arr.length];
         int length = ans.length-2;
 
