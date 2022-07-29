@@ -5,7 +5,8 @@ import java.util.*;
 public class Largest_Reactangle {
     public static void main(String[] args) {
         int[] arr = {6, 2, 5, 4, 1, 5, 6};
-        int ans = largestRectangle(arr);
+        // int ans = largestRectangle(arr);
+        int ans = largestRect(arr);
         System.out.println(ans);
     }
 
@@ -48,6 +49,29 @@ public class Largest_Reactangle {
             curr += (next[i] - i -1) * arr[i];
             res = Math.max(res, curr);
         }
+        return res;
+    }
+
+
+    static int largestRect(int[] arr) {
+        ArrayDeque<Integer> s = new ArrayDeque<>();
+        int res = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            while (!s.isEmpty() && arr[i] <= arr[s.peek()]) {
+                int top = s.pop();
+                int curr = arr[top] * (s.isEmpty() ? i : (i - s.peek() - 1));
+                res = Math.max(res, curr);
+            }
+            s.push(i);
+        }
+
+        while (!s.isEmpty()){
+            int top = s.pop();
+            int curr = arr[top] * (s.isEmpty() ? (arr.length) : (arr.length - s.peek() - 1));
+            res = Math.max(res, curr);
+        }
+
         return res;
     }
 
