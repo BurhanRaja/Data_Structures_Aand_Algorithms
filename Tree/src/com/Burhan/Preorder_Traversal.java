@@ -1,6 +1,6 @@
 package com.Burhan;
 
-public class Inorder_Traversal {
+public class Preorder_Traversal {
 
     static class Node{
         int key;
@@ -11,7 +11,6 @@ public class Inorder_Traversal {
         }
     }
 
-
     public static void main(String[] args) {
         Node root = new Node(10);
         root.left = new Node(20);
@@ -20,16 +19,15 @@ public class Inorder_Traversal {
         root.left.right = new Node(50);
         root.right.left = new Node(60);
 
-        inOrderTraversal(root);
+        preOrderTraversal(root);
     }
 
-    // Time Complexity O(n)
-    // Left Root Right
-    static void inOrderTraversal(Node root) {
+    // Root Left Right
+    static void preOrderTraversal(Node root) {
         if (root != null) {
-            inOrderTraversal(root.left);
             System.out.print(root.key + " ");
-            inOrderTraversal(root.right);
+            preOrderTraversal(root.left);
+            preOrderTraversal(root.right);
         }
     }
 }
