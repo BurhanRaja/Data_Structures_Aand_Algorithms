@@ -28,4 +28,38 @@ public class Insert_BST {
         }
         return root;
     }
+
+    // Iterative
+    static Node iterativeBSTInsert(Node root, int x) {
+        Node temp = new Node(x);
+        Node parent = null;
+        Node curr = root;
+
+        while (curr != null) {
+            parent = curr;
+            if (curr.key < x) {
+                curr = curr.right;
+            }
+            else if(curr.key > x){
+                curr = curr.left;
+            }
+            else {
+                return root;
+            }
+        }
+
+        // When root == null
+        if (parent == null) {
+            return temp;
+        }
+
+        if (parent.key < temp.key) {
+            parent.right = temp;
+        }
+        else {
+            parent.left = temp;
+        }
+
+        return root;
+    }
 }

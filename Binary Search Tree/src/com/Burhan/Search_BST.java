@@ -41,4 +41,21 @@ public class Search_BST {
             return bstSearch(root.left, x);
         }
     }
+
+    
+    // Iterative
+    static boolean iterativeBSTSearch(Node root, int x) {
+        while (root != null) {
+            if (root.key == x) {
+                return true;
+            }
+            else if (root.key < x) {
+                root = root.right;
+            }
+            else {
+                root = root.left;
+            }
+        }
+        return false;
+    }
 }
