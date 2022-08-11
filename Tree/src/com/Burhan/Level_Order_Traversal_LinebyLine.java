@@ -25,7 +25,8 @@ public class Level_Order_Traversal_LinebyLine {
         root.right.left.left = new Node(60);
         root.right.left.right = new Node(70);
 
-        levelOrderTrav(root);
+        // levelOrderTrav(root);
+        levelOrder(root);
     }
 
     static void levelOrderTrav(Node root) {
@@ -51,6 +52,32 @@ public class Level_Order_Traversal_LinebyLine {
             
             if (curr.right != null) {
                 q.add(curr.right);
+            }
+        }
+    }
+
+    static void levelOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while(!q.isEmpty()) {
+            int count = q.size();
+            // Not taking q.size() directly because the size of the q will continuously keep changing
+            for (int i = 0; i < count; i++) {
+                Node curr = q.poll();
+                System.out.print(curr.key + " ");
+                if (curr.left != null) {
+                    q.add(curr.left);
+                }
+                if (curr.right != null) {
+                    q.add(curr.right);
+                }
+            }
+            if (q.size() >0) {
+                System.out.println();
             }
         }
     }
