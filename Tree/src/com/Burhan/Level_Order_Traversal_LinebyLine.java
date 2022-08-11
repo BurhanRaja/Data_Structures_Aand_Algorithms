@@ -3,8 +3,7 @@ package com.Burhan;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// Breadth First Search
-public class Level_order_Traversal {
+public class Level_Order_Traversal_LinebyLine {
 
     static class Node{
         int key;
@@ -14,7 +13,6 @@ public class Level_order_Traversal {
             key = k;
         }
     }
-
 
     public static void main(String[] args) {
         Node root = new Node(10);
@@ -27,30 +25,33 @@ public class Level_order_Traversal {
         root.right.left.left = new Node(60);
         root.right.left.right = new Node(70);
 
-        levelOrderTraversal(root);
+        levelOrderTrav(root);
     }
 
-    // Time Compxity:- O(n)
-    // Auxilary Space:- O(w), where 'w' is width of the Tree
-    static void levelOrderTraversal(Node root) {
+    static void levelOrderTrav(Node root) {
         if (root == null) {
             return;
         }
-        else {
-            Queue<Node> q = new LinkedList<>();
-            q.add(root);
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
 
-            while (!q.isEmpty()) {
-                Node curr = q.poll();
-                System.out.print(curr.key + " ");
-                if (curr.left != null) {
-                    q.add(curr.left);
-                }
-                
-                if (curr.right != null) {
-                    q.add(curr.right);
-                }
+        while (q.size() > 1) {
+            Node curr = q.poll();
+            if (curr == null){
+                System.out.println();
+                q.add(null);
+                continue;
+            }
+            
+            System.out.print(curr.key +" ");
+            if (curr.left != null) {
+                q.add(curr.left);
+            }
+            
+            if (curr.right != null) {
+                q.add(curr.right);
             }
         }
     }
-}
+} 
