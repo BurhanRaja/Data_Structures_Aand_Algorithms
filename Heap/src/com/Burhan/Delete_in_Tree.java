@@ -1,7 +1,6 @@
 package com.Burhan;
 
-public class Decrease_key{
-
+public class Delete_in_Tree {
     static class MinHeap {
         int[] arr;
         int size, cap;
@@ -46,6 +45,7 @@ public class Decrease_key{
             }
         }
 
+        // O(h) h:height of tree
         public void heapifyTree(int i) {
 
             int leftEl=left(i);
@@ -78,31 +78,38 @@ public class Decrease_key{
             return arr[size];
         }
 
+        // O(logn)
         public void decreaseKey(int i, int x) {
             arr[i] = x;
             for (int j = i; j != 0 && arr[parent(j)] > arr[j]; j=parent(j)) {
                 swap(arr, j, parent(j));
             }
         }
+
+        // O(logn)
+        public void deleteKey(int i) {
+            int minKey= Integer.MIN_VALUE;
+            decreaseKey(i, minKey);
+            getMin();
+        }
     }
 
-    public static void main(String[] args) {
-        MinHeap mh = new MinHeap(8);
-        mh.insertNode(20);
-        mh.insertNode(80);
-        mh.insertNode(200);
-        mh.insertNode(90);
-        mh.insertNode(100);
-        mh.insertNode(250);
-        mh.insertNode(500);
-        mh.insertNode(120);
-        
-        mh.printArr();
-
-        System.out.println();
-        
-        mh.decreaseKey(3, 10);
-
-        mh.printArr();
-    }
+        public static void main(String[] args) {
+            MinHeap mh = new MinHeap(8);
+            mh.insertNode(20);
+            mh.insertNode(80);
+            mh.insertNode(200);
+            mh.insertNode(90);
+            mh.insertNode(100);
+            mh.insertNode(250);
+            mh.insertNode(500);
+            mh.insertNode(120);
+            
+            mh.printArr();
+            
+            System.out.println();
+            
+            mh.deleteKey(3);
+            mh.printArr();
+        }
 }
