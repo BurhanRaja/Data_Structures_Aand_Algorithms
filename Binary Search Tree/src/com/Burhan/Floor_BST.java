@@ -21,7 +21,7 @@ public class Floor_BST {
         root.right = new Node(70);
         root.right.left = new Node(60);
         root.right.right = new Node(80);
-        root.right.left.left = new Node(55);
+        root.right.left.left = new Node(56);
         root.right.left.right = new Node(65);
 
         Node ans = bstFloor(root, 58);
