@@ -106,13 +106,13 @@ public class Build_Heap {
     }
 
     public static void main(String[] args) {
-        MinHeap mh = new MinHeap(6);
+        // 10, 4, 50, 15, 20
+        MinHeap mh = new MinHeap(5);
         mh.insertNode(10);
-        mh.insertNode(5);
-        mh.insertNode(20);
-        mh.insertNode(2);
+        mh.insertNode(15);
+        mh.insertNode(50);
         mh.insertNode(4);
-        mh.insertNode(8);
+        mh.insertNode(20);
 
         mh.buildHeap();
 
