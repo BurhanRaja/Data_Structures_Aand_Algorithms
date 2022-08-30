@@ -29,7 +29,7 @@ public class Adjacency_List {
     static void printGraph(ArrayList<LinkedList<Integer>> adj) {
         for (int i = 0; i < adj.size(); i++) {
             for (int j = 0; j < adj.get(i).size(); j++) {
-                System.out.print(i + " - " + adj.get(i).get(j) + " ");
+                System.out.print(adj.get(i).get(j) + " ");
             }
             System.out.println();
         }
