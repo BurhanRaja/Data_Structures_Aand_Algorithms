@@ -17,9 +17,8 @@ public class Cyclic_Sort {
             int correct = arr[i] - 1;
             if (arr[i] != arr[correct]) {
                 swap(arr, i , correct);
-            } else {
-                i++;
             }
+            i++;
         }
         System.out.println(Arrays.toString(arr));
     }
